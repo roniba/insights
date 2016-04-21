@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('insightsApp')
-  .directive('view1', function () {
+  .directive('mainView', function () {
     return {
       restrict:    'E',
-      templateUrl: 'views/view1.html',
+      templateUrl: 'views/main-view.html',
       scope:       {
         label:   '@',
         onClick: '&'

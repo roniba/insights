@@ -35,7 +35,7 @@
   <body>
     
     <!-- Add your site or application content here -->
-    <view1></view1>
+    <main-view></main-view>
 
 
     <!-- process-tags prefix('${staticsUrl}') -->
@@ -55,7 +55,7 @@
     <script src="scripts/app.js"></script>
     <script src="views/temp-app.html.js"></script>
     <script src="scripts/locale/messages_en.js"></script>
-    <script src="scripts/directives/view1.js"></script>
+    <script src="scripts/directives/main-view.js"></script>
     <!--<script src="scripts/directives/aaaaa-temp.js"></script>-->
     <script src="scripts/directives/button1.js"></script>
     <!-- endbuild --><!-- scripts -->
@@ -84,7 +84,7 @@
         experimentManagerProvider.setExperiments(JSON.parse('${experiments}'));
       });
     </script>
-
+    <!--<script src="scripts/directives/aaaaa-temp.js"></script>-->
     ${newRelicEndUserFooter}
     
   </body>
