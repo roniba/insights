@@ -1,0 +1,12 @@
+.container(ng-click="$ctrl.onClick()" data-hook="container")
+  .hero-unit
+    %h1
+      {{'general.YO' | translate}}
+      %i.logo-on-header.temp-svg-font-icons-wix-logo
+    %div
+      This is {{$ctrl.name}} (
+      %span(data-hook="counter") {{$ctrl.clicks}}
+      )
+    %h3 Enjoy coding! - Yeoman ddd2
+
+%canvas(id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-legend="true" chart-series="series" chart-click="onClick")
