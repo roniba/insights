@@ -1,16 +1,17 @@
-angular.module("tempAppInternal", ["chart.js"])
-  // Optional configuration
-  .config(['ChartJsProvider', function (ChartJsProvider) {
-    // Configure all charts
-    ChartJsProvider.setOptions({
-      colours: ['#FF5252', '#FF8A80'],
-      responsive: false
-    });
-    // Configure all line charts
-    ChartJsProvider.setOptions('Line', {
-      datasetFill: false
-    });
-  }])
+//angular.module("tempApp")
+angular.module("tempApp", ["chart.js"])
+   //Optional configuration
+  //.config(['ChartJsProvider', function (ChartJsProvider) {
+  //  // Configure all charts
+  //  ChartJsProvider.setOptions({
+  //    colours: ['#FF5252', '#FF8A80'],
+  //    responsive: false
+  //  });
+  //  // Configure all line charts
+  //  ChartJsProvider.setOptions('Line', {
+  //    datasetFill: false
+  //  });
+  //}])
   .controller("LineCtrl", ['$scope', '$timeout', function ($scope, $timeout) {
 
     $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
