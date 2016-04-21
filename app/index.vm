@@ -13,7 +13,7 @@
   #set( $staticsUrl = $clientTopology.tempStaticsUrl )
   #set( $staticBaseUrl = $clientTopology.staticBaseUrl )
 -->
-<html ng-app="tempApp">
+<html ng-app="insightsApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -73,12 +73,12 @@
     <script>
       /* jshint ignore:start */
       if ('${enableMocks}' === 'true') {
-        angular.module('tempApp').requires.push('tempAppMocks');
+        angular.module('insightsApp').requires.push('tempAppMocks');
       }
     </script>
     <!-- #end -->
     <script>
-      angular.module('tempApp').config(function (wixAngularTopologyProvider, experimentManagerProvider) {
+      angular.module('insightsApp').config(function (wixAngularTopologyProvider, experimentManagerProvider) {
         wixAngularTopologyProvider.setStaticsUrl('${staticsUrl}');
         experimentManagerProvider.setExperiments(JSON.parse('${experiments}'));
       });

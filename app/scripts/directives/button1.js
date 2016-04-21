@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('tempApp')
+angular.module('insightsApp')
   .directive('button1', function () {
     return {
       restrict:    'E',

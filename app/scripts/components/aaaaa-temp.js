@@ -1,5 +1,5 @@
-//angular.module("tempApp")
-angular.module("tempApp", ["chart.js"])
+//angular.module("insightsApp")
+angular.module("insightsApp", ["chart.js"])
    //Optional configuration
   //.config(['ChartJsProvider', function (ChartJsProvider) {
   //  // Configure all charts
