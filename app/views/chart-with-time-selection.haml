@@ -1,7 +1,8 @@
 %h2 {{$ctrl.chart.title}}
 %canvas(style='border: 1px black solid;'
   width='500'
-  class="chart chart-line"
+  class="chart-base"
+  chart-type="$ctrl.chart.type"
   chart-data="$ctrl.chart.data"
   chart-labels="$ctrl.chart.labels"
   chart-legend="false"
@@ -9,3 +10,4 @@
   chart-click="$ctrl.chart.onClick"
   chart-options="{'responsive': false, 'maintainAspectRatio': true, 'bezierCurve': false}")
 %timeframe-selector(week-clicked="$ctrl.changeChartView('week')" month-clicked="$ctrl.changeChartView('month')" year-clicked="$ctrl.changeChartView('year')")
+-#class="{{$ctrl.getChartClass}}"

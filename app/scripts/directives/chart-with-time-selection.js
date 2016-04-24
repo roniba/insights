@@ -1,10 +1,11 @@
-angular.module('insightsApp').directive('lineChartWithTimeSelection', function(chartsData){
+angular.module('insightsApp').directive('chartWithTimeSelection', function(chartsData){
   return {
     restrict: 'E',
-    templateUrl: 'views/line-chart-with-time-selection.html',
+    templateUrl: 'views/chart-with-time-selection.html',
     scope: {
       chartName: '@',
-      chartTitle: '@'
+      chartTitle: '@',
+      chartType: '@'
     },
     controllerAs: '$ctrl',
     controller: function($scope) {
@@ -15,8 +16,14 @@ angular.module('insightsApp').directive('lineChartWithTimeSelection', function(c
         this.chart.data = [this.chart.allData[timeframe].data];
       };
 
+      this.getChartClass = function(){
+        return 'chart-line';// + $scope.chartType || 'chart-line';
+      };
+
+
       this.chart = {};
       this.chart.title = $scope.chartTitle;
+      this.chart.type = $scope.chartType;
       this.chart.allData = chartsData.getData($scope.chartName);
       this.chart.series = ['Series A'];
       this.changeChartView('year');
