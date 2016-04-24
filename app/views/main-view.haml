@@ -1,9 +1,3 @@
 %h1 hyush
 %button1
-%div(ng-controller='HelloWorldController')
-  %canvas(style='border: 1px black solid;' id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-legend="true" chart-series="series" chart-click="onClick")
-.canvas2(ng-controller='BarCtrl')
-  %canvas(style='border: 1px red solid;' id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series")
-.canvas3(ng-controller="GraphCtrl")
-  %p Hello, {{graph.name}}
-  %canvas(style='border: 1px blue dashed;' class="chart chart-line" data="graph.data" labels="graph.labels" series='graph.series' height="50")
+%overview-graphs
