@@ -1,0 +1,72 @@
+// scss-lint:disable all
+//----------------------------------*\
+// ONBOARDING COLOR PALETTE
+//----------------------------------*/
+
+//----------------------------------*\
+// WHITES
+//----------------------------------*/
+
+$color-w1: #ffffff;
+$color-w2: rgba(255, 255, 255, .96);
+$color-w3: rgba(255, 255, 255, .94);
+$color-w4: rgba(255, 255, 255, .92);
+
+//----------------------------------*\
+// DARKS
+//----------------------------------*/
+
+$black: #000000;
+$color-o1: #162d3d;
+
+//----------------------------------*\
+// COLOR PALLETE
+//----------------------------------*/
+
+// Desaturated        // Yellow             // Orange
+$color-d1: #20303c; $color-y1: #e2902b; $color-o1: #d9644a;
+$color-d2: #43515c; $color-y2: #faa030; $color-o2: #e66a4e;
+$color-d3: #66737c; $color-y3: #faad4d; $color-o3: #ea6953;
+$color-d4: #858f96; $color-y4: #fbbd71; $color-o4: #ff8772;
+$color-d5: #a3abb0; $color-y5: #fcce94; $color-o5: #f0a794;
+$color-d6: #c2c7cb; $color-y6: #fddeb8; $color-o6: #f0c2b3;
+$color-d7: #e0e3e5; $color-y7: #feefdb; $color-o7: #fce2dc;
+$color-d8: #eff1f2; $color-y8: #fef7ed; $color-o8: #fef0ed;
+
+// Blue               // Cyan               // Green
+$color-b1: #3182c8; $color-c1: #00aaaf; $color-g1: #00a65f;
+$color-b2: #4196e0; $color-c2: #32babc; $color-g2: #32b76c;
+$color-b3: #459fed; $color-c3: #3cc7c5; $color-g3: #65c888;
+$color-b4: #4eb7f5; $color-c4: #64d4d2; $color-g4: #84d3a0;
+$color-b5: #7fccf7; $color-c5: #8bdfdd; $color-g5: #a3deb8;
+$color-b6: #b2e0fa; $color-c6: #b1e9e9; $color-g6: #c1e9cf;
+$color-b7: #d3edff; $color-c7: #d8f4f4; $color-g7: #e8f7ef;
+$color-b8: #eaf7ff; $color-c8: #ebf9f9; $color-g8: #f3fbf7;
+
+// Purple              // Violet             // Red
+$color-p1: #8b1079; $color-v1: #48217b; $color-r1: #cf262f;
+$color-p2: #a0138e; $color-v2: #542790; $color-r2: #ee2c38;
+$color-p3: #b13dac; $color-v3: #733ca6; $color-r3: #f2564d;
+$color-p4: #c164bd; $color-v4: #8f63b8; $color-r4: #f57871;
+$color-p5: #d08bcd; $color-v5: #ab8aca; $color-r5: #f79a94;
+$color-p6: #e0b1de; $color-v6: #c7b1db; $color-r6: #f79a94;
+$color-p7: #efd8ee; $color-v7: #e3d8ed; $color-r7: #fcdddb;
+$color-p8: #f7ebf7; $color-v8: #f1ebf6; $color-r8: #feeeed;
+
+//----------------------------------*\
+// SHADOWS
+//----------------------------------*/
+
+$color-sh1: #133752;
+$color-sh2: #326bcc;
+
+$shadow-sh1: (dimensions: "0px 0px 6px 0px", alpha: 0.12);
+$shadow-sh2: (dimensions: "0px 0px 14px 0px", alpha: 0.1);
+$shadow-sh3: (dimensions: "0px 2px 17px 0px", alpha: 0.11);
+$shadow-sh4: (dimensions: "0px 5px 20px 0px", alpha: 0.11);
+$shadow-sh5: (dimensions: "0px 6px 26px 0px", alpha: 0.13);
+$shadow-sh6: (dimensions: "0px 6px 70px 0px", alpha: 0.13);
+
+@function cc-shadow($shadow, $color) {
+  @return unquote(map-get($shadow, dimensions)) rgba($color, map-get($shadow, alpha));
+}

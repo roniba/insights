@@ -1,5 +1,19 @@
 timeframe-selector {
+  display: flex;
+  width: 500px;
+  justify-content: center;
+
   button {
+    height: 42px;
     width: 100px;
+    padding: 0 10px;
+    border-radius: 21px;
+    border: 1px $color-d5 solid;
+    outline: none;
+    background-color: $color-w1;
+    color: $color-b3;
+    margin: 0 10px;
+    font-size: 15px;
   }
 }
+
