@@ -1,0 +1,15 @@
+overview-graphs {
+  position: absolute;
+
+  line-chart-with-time-selection {
+    position: absolute;
+
+    &.orders {
+      left: 0;
+    }
+
+    &.revenue {
+      left: 600px;
+    }
+  }
+}
