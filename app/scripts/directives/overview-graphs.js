@@ -1,13 +1,15 @@
+'use strict';
+
 angular.module('insightsApp')
-  .directive('overviewGraphs', function(){
+  .directive('overviewGraphs', function () {
     return {
       restrict: 'E',
       templateUrl: 'views/overview-graphs.html',
       scope: {},
-      controllerAs : '$ctrl',
-      controller: function() {
+      controllerAs: '$ctrl',
+      controller: function () {
         this.ordersGraph = {};
-        this.ordersGraph.labels = ["January", "February", "March", "April", "May", "June", "July"];
+        this.ordersGraph.labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
         this.ordersGraph.series = ['Series A', 'Series B'];
         this.ordersGraph.data = [
           [65, 59, 80, 81, 56, 55, 40],
@@ -18,7 +20,7 @@ angular.module('insightsApp')
         };
 
         this.revenueGraph = {};
-        this.revenueGraph.labels = ["January", "February", "March", "April", "May", "June", "July"];
+        this.revenueGraph.labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
         this.revenueGraph.series = ['Series C', 'Series D'];
         this.revenueGraph.data = [
           [65, 59, 80, 81, 56, 55, 40],
