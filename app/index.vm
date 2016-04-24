@@ -58,6 +58,7 @@
     <script src="scripts/directives/main-view.js"></script>
     <script src="scripts/directives/overview-graphs.js"></script>
     <script src="scripts/directives/button1.js"></script>
+    <script src="scripts/directives/timeframe-selector.js"></script>
     <!-- endbuild --><!-- scripts -->
     <!-- build:locale({.tmp,app}) scripts/locale/messages_${locale}.js -->
     <script src="scripts/locale/messages_${locale}.js"></script>
