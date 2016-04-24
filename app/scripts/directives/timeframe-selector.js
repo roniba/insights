@@ -3,22 +3,19 @@ angular.module('insightsApp').directive('timeframeSelector', function(){
     restrict: 'E',
     templateUrl: 'views/timeframe-selector.html',
     scope: {
-
+      weekClicked: '&',
+      monthClicked: '&',
+      yearClicked: '&'
     },
     controllerAs: '$ctrl',
     controller: function() {
       this.lastWeekButtonLabel = 'Last Week';
       this.lastMonthButtonLabel = 'Last Month';
       this.lastYearButtonLabel = 'Last Year';
-      this.lastWeekButtonClick = function() {
-        alert('lastWeekButtonClick');
-      }
-      this.lastMonthButtonClick = function() {
-        alert('lastMonthButtonClick');
-      }
+
       this.lastYearButtonClick = function() {
-        alert('lastYearButtonClick');
-      }
+        console.log('lastYearButtonClick');
+      };
     }
   }
 });
