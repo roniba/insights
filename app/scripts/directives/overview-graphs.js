@@ -1,3 +1,15 @@
+//angular.module('insightsApp')
+//  .directive('button1', function () {
+//    return {
+//      restrict:    'E',
+//      templateUrl: 'views/button1.html',
+//      scope:       {
+//        label:   '@',
+//        onClick: '&'
+//      }
+//    };
+//  });
+
 angular.module('insightsApp').controller("HelloWorldController", function ($scope) {
 
   $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
