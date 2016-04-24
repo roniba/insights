@@ -5,11 +5,11 @@ top-products-graphs {
   chart-with-time-selection {
     position: absolute;
 
-    &.orders {
+    &.left-chart {
       left: 0;
     }
 
-    &.revenue {
+    &.right-chart {
       left: 600px;
     }
   }
