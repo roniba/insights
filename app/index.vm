@@ -58,7 +58,7 @@
     <script src="scripts/directives/main-view.js"></script>
     <script src="scripts/directives/overview-graphs.js"></script>
     <script src="scripts/directives/timeframe-selector.js"></script>
-    <script src="scripts/directives/chart-with-time-selection.js"></script>
+    <script src="scripts/directives/line-chart-with-time-selection.js"></script>
 
     <script src="scripts/services/charts-data.js"></script>
     <!-- endbuild --><!-- scripts -->

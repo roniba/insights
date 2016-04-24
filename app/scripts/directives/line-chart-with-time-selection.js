@@ -1,7 +1,7 @@
 angular.module('insightsApp').directive('chartWithTimeSelection', function(chartsData){
   return {
     restrict: 'E',
-    templateUrl: 'views/chart-with-time-selection.html',
+    templateUrl: 'views/line-chart-with-time-selection.html',
     scope: {
       chartName: '@'
     },
