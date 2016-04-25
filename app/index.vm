@@ -62,6 +62,10 @@
     <script src="scripts/directives/chart-with-time-selection.js"></script>
 
     <script src="scripts/services/charts-data.js"></script>
+    <script src="scripts/services/analytics-api.js"></script>
+    <script src="scripts/services/insights.js"></script>
+    <script src="scripts/services/insights-utils.js"></script>
+    <script src="scripts/services/traffic-insights.js"></script>
     <!-- endbuild --><!-- scripts -->
     <!-- build:locale({.tmp,app}) scripts/locale/messages_${locale}.js -->
     <script src="scripts/locale/messages_${locale}.js"></script>
