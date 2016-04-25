@@ -2,16 +2,16 @@ angular.module('insightsApp')
   .service('chartsData', function () {
     var orders = {
       week: {
-        data: [3, 2, 0, 0, 0, 4, 0],
+        data: [3, 1, 0, 0, 0, 4, 0],
         labels: ['Jan 1st', 'Jan 2nd', 'Jan 3rd', 'Jan 4th', 'Jan 5th', 'Jan 6th', 'Jan 7th']
       },
       month: {
-        data: [10, 3, 7, 15, 14, 30, 24, 26, 33, 44, 25, 11],
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        data: [7, 14, 5, 19],
+        labels: ['1st-7th', '8th-14th', '15th-21th', '22th-28th']
       },
       year: {
-        data: [89, 59, 115, 23],
-        labels: ['2013', '2014', '2015', '2016']
+        data: [20, 6, 14, 32, 28, 60, 48, 52, 66, 88, 50, 22],
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
       }
     };
 
@@ -21,12 +21,12 @@ angular.module('insightsApp')
         labels: ['Jan 1st', 'Jan 2nd', 'Jan 3rd', 'Jan 4th', 'Jan 5th', 'Jan 6th', 'Jan 7th']
       },
       month: {
-        data: [33, 97, 140, 664, 455, 99, 140, 89, 90, 131, 153, 256],
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        data: [115, 145, 500, 190],
+        labels: ['1st-7th', '8th-14th', '15th-21th', '22th-28th']
       },
       year: {
-        data: [467, 859, 1247, 165],
-        labels: ['2013', '2014', '2015', '2016']
+        data: [330, 970, 1400, 664, 855, 990, 140, 589, 590, 531, 753, 456],
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
       }
     };
 
