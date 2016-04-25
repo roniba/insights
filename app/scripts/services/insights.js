@@ -3,11 +3,13 @@
 angular.module('insightsApp').service('insights', function (trafficInsights) {
 
   this.INSIGHT_SOURCE = {
-    TRAFFIC: 'traffic',
-    STORE: 'store',
-    CONTENT: 'content',
-    TOP_USERS_COMPARISON: 'topUserComparison',
-    SITE_METADATA: 'siteMetaData'
+    TRAFFIC: 'traffic', // UoU traffic
+    STORE: 'store', // store inventory
+    CONTENT: 'content', // site content, site history
+    TOP_USERS_COMPARISON: 'topUserComparison', //comparison to top users in terms of traffic
+    SITE_METADATA: 'siteMetaData', // domain name
+    CALENDAR: 'calendar', // insights based on calendar events, e.g. valentines
+    FEATURE_USE: 'featureUse' // which feature did the user use
   };
 
   this.getInsights = function (sourceType) {

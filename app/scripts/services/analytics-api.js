@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('insightsApp').service('analyticsApi', function () {
+angular.module('insightsApp').service('analyticsApi', function (insightsUtils) {
 
   this.userId = 'userId';
 
@@ -9,7 +9,7 @@ angular.module('insightsApp').service('analyticsApi', function () {
   };
 
   this.siteVisits = {
-    getCountOfTimeRange: function (timeFrame /*by Days/Week/Month/Year */, startDate, endDate) {
+    getCountOfTimeRange: function (timeFrame /*by Days/Week/Month/Year */, dateRange) {
       return 30; //TODO
     },
 
@@ -35,7 +35,7 @@ angular.module('insightsApp').service('analyticsApi', function () {
   };
 
   this.pageVisits = {
-    getCountOfTimeRange: function (pageId, timeFrame /*by Days/Week/Month/Year */, startDate, endDate) {
+    getCountOfTimeRange: function (pageId, timeFrame /*by Days/Week/Month/Year */, dateRange) {
       return 20; //TODO
     },
 
@@ -61,7 +61,7 @@ angular.module('insightsApp').service('analyticsApi', function () {
   };
 
   this.productViews = {
-    getCountOfTimeRange: function (productId, timeFrame /*by Days/Week/Month/Year */, startDate, endDate) {
+    getCountOfTimeRange: function (productId, timeFrame /*by Days/Week/Month/Year */, dateRange) {
       return 20; //TODO
     },
 
@@ -88,7 +88,7 @@ angular.module('insightsApp').service('analyticsApi', function () {
 
 
   this.addToCart = {
-    getCountOfTimeRange: function (productId, timeFrame /*by Days/Week/Month/Year */, startDate, endDate) {
+    getCountOfTimeRange: function (productId, timeFrame /*by Days/Week/Month/Year */, dateRange) {
       return 20; //TODO
     },
 
@@ -114,7 +114,7 @@ angular.module('insightsApp').service('analyticsApi', function () {
   };
 
   this.orders = {
-    getCountOfTimeRange: function (productId, timeFrame /*by Days/Week/Month/Year */, startDate, endDate) {
+    getCountOfTimeRange: function (productId, timeFrame /*by Days/Week/Month/Year */, dateRange) {
       return 20; //TODO
     },
 
@@ -140,7 +140,7 @@ angular.module('insightsApp').service('analyticsApi', function () {
   };
 
   this.revenue = {
-    getCountOfTimeRange: function (productId, timeFrame /*by Days/Week/Month/Year */, startDate, endDate) {
+    getCountOfTimeRange: function (productId, timeFrame /*by Days/Week/Month/Year */, dateRange) {
       return 20; //TODO
     },
 
@@ -165,5 +165,109 @@ angular.module('insightsApp').service('analyticsApi', function () {
     }
   };
 
+  this.bounceRate = {
+      getRateOfTimeRange: function (timeFrame /*by Days/Week/Month/Year */, dateRange) {
+        return 0.8; //TODO
+      }
+  };
+
+  this.byPlatform = {
+    siteVisits: {
+      getCountOfTimeRange: function (timeFrame /*by Days/Week/Month/Year */, dateRange) {
+        return {
+          mobile: 10,
+          desktop: 20
+        }; //TODO
+      },
+
+      getCountOfLastDays: function (numDays) {
+        return {
+            mobile: numDays * 2,
+            desktop: numDays * 3,
+          }; //TODO
+      }
+    },
+    bounceRate: {
+      getRateOfTimeRange: function (timeFrame /*by Days/Week/Month/Year */, dateRange) {
+        return {
+          mobile: 0.8,
+          desktop: 0.6
+        }; //TODO
+      }
+    }
+  };
+
+  this.byChannel = {
+    siteVisits: {
+      getCountOfTimeRange: function (timeFrame /*by Days/Week/Month/Year */, dateRange) {
+        return {
+          search: 10,
+          referral: 20,
+          campaign: 20,
+          email: 20,
+          direct: 20,
+          other: 20
+        }; //TODO
+      },
+
+      getCountOfLastDays: function (numDays) {
+        return {
+          search: 10,
+          referral: 20,
+          campaign: 20,
+          email: 20,
+          direct: 20,
+          other: 20
+        }; //TODO
+      }
+    }
+  };
+
+  this.byVisitors = {
+    siteVisits: {
+      getCountOfTimeRange: function (timeFrame /*by Days/Week/Month/Year */, dateRange) {
+        return {
+          uouId1: 10,
+          uouId2: 20,
+          uouId3: 20
+        }; //TODO
+      },
+
+      getCountOfLastDays: function (numDays) {
+        return {
+          uouId1: 10,
+          uouId2: 20,
+          uouId3: 20
+        }; //TODO
+      }
+    }
+  };
+
+  this.funnel = {
+    getSiteVisitsToProductPageVisits: function (productPageId /*, dateRange*/) {
+      var productPageVisits = this.pageVisits.getCountOfLastDays(productPageId, 100);
+      var siteVisits = this.siteVisits.getCountOfLastDays(100);
+      return productPageVisits / siteVisits;
+    },
+
+    getProductPageVisitsToProductsViews: function (productPageId /*, dateRange*/) {
+      var productPageVisits = this.pageVisits.getCountOfLastDays(productPageId, 100);
+      var productsViews = this.productViews.getCountOfLastDays(100);
+      return productsViews / productPageVisits;
+    },
+
+    getProductsViewsToAddedToCart: function (/*dateRange*/) {
+      return 0.3; //TODO
+    },
+
+    getAddedToCartToPurchased: function (/*dateRange*/) {
+      return 0.3; //TODO
+    }
+
+  };
+
+  this.visitor = {
+
+  };
 
 });
