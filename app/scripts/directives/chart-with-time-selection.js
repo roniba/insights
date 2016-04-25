@@ -11,15 +11,9 @@ angular.module('insightsApp').directive('chartWithTimeSelection', function(chart
     controller: function($scope) {
 
       this.changeChartView = function(timeframe) {
-        console.log('changeChartView: ' + timeframe);
         this.chart.labels = this.chart.allData[timeframe].labels;
         this.chart.data = [this.chart.allData[timeframe].data];
       };
-
-      this.getChartClass = function(){
-        return 'chart-line';// + $scope.chartType || 'chart-line';
-      };
-
 
       this.chart = {};
       this.chart.title = $scope.chartTitle;
