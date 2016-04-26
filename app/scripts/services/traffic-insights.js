@@ -23,7 +23,7 @@ angular.module('insightsApp').service('trafficInsights', function (analyticsApi,
     ret = ret.concat(this.productsNotViewed());
     ret = ret.concat(this.productsNotAddedToCart());
     ret = ret.concat(this.productsNotPurchased());
-    ret = ret.concat(this.highlyPromotingProducts());
+    ret = ret.concat(this.highlyConvertingProducts());
     ret = ret.concat(this.poorlyConvertingProducts());
     ret = ret.concat(this.getPotentialProduct());
     ret = ret.concat(this.problematicMobileBounceRate());
@@ -73,7 +73,7 @@ angular.module('insightsApp').service('trafficInsights', function (analyticsApi,
     return []; //TODO - funnel problem from addedToCart to purchased
   };
 
-  this.highlyPromotingProducts = function () {
+  this.highlyConvertingProducts = function () {
     return []; // TODO - return best selling product with most views
   };
 

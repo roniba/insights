@@ -9,11 +9,11 @@ angular.module('insightsApp').service('analyticsApi', function (insightsUtils) {
   };
 
   this.siteVisits = {
-    getCountOfTimeRange: function (timeFrame /*by Days/Week/Month/Year */, dateRange) {
+    getCountOfTimeRange: function (timeFrame /*by Days/Week/Month/Year */, dateRange, groupBy /*'device'/'country'/'channel','visitor' */) {
       return 30; //TODO
     },
 
-    getCountOfLastDays: function (numDays) {
+    getCountOfLastDays: function (numDays, groupBy /*'device'/'country'/'channel','visitor' */) {
       return numDays * 5; //TODO
     },
 
@@ -166,81 +166,9 @@ angular.module('insightsApp').service('analyticsApi', function (insightsUtils) {
   };
 
   this.bounceRate = {
-      getRateOfTimeRange: function (timeFrame /*by Days/Week/Month/Year */, dateRange) {
+      getRateOfTimeRange: function (timeFrame /*by Days/Week/Month/Year */, dateRange, groupBy /*'device'/'country'/'channel','visitor' */) {
         return 0.8; //TODO
       }
-  };
-
-  this.byPlatform = {
-    siteVisits: {
-      getCountOfTimeRange: function (timeFrame /*by Days/Week/Month/Year */, dateRange) {
-        return {
-          mobile: 10,
-          desktop: 20
-        }; //TODO
-      },
-
-      getCountOfLastDays: function (numDays) {
-        return {
-            mobile: numDays * 2,
-            desktop: numDays * 3,
-          }; //TODO
-      }
-    },
-    bounceRate: {
-      getRateOfTimeRange: function (timeFrame /*by Days/Week/Month/Year */, dateRange) {
-        return {
-          mobile: 0.8,
-          desktop: 0.6
-        }; //TODO
-      }
-    }
-  };
-
-  this.byChannel = {
-    siteVisits: {
-      getCountOfTimeRange: function (timeFrame /*by Days/Week/Month/Year */, dateRange) {
-        return {
-          search: 10,
-          referral: 20,
-          campaign: 20,
-          email: 20,
-          direct: 20,
-          other: 20
-        }; //TODO
-      },
-
-      getCountOfLastDays: function (numDays) {
-        return {
-          search: 10,
-          referral: 20,
-          campaign: 20,
-          email: 20,
-          direct: 20,
-          other: 20
-        }; //TODO
-      }
-    }
-  };
-
-  this.byVisitors = {
-    siteVisits: {
-      getCountOfTimeRange: function (timeFrame /*by Days/Week/Month/Year */, dateRange) {
-        return {
-          uouId1: 10,
-          uouId2: 20,
-          uouId3: 20
-        }; //TODO
-      },
-
-      getCountOfLastDays: function (numDays) {
-        return {
-          uouId1: 10,
-          uouId2: 20,
-          uouId3: 20
-        }; //TODO
-      }
-    }
   };
 
   this.funnel = {
@@ -271,3 +199,9 @@ angular.module('insightsApp').service('analyticsApi', function (insightsUtils) {
   };
 
 });
+
+
+
+//Questions:
+
+// how long does the
