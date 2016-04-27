@@ -1,5 +1,35 @@
 angular.module('insightsApp')
   .service('chartsData', function () {
+    var visitors = {
+      week: {
+        data: [30, 143, 10, 20, 2, 114, 310],
+        labels: ['Jan 1st', 'Jan 2nd', 'Jan 3rd', 'Jan 4th', 'Jan 5th', 'Jan 6th', 'Jan 7th']
+      },
+      month: {
+        data: [437, 414, 345, 619],
+        labels: ['1st-7th', '8th-14th', '15th-21th', '22th-28th']
+      },
+      year: {
+        data: [6520, 3636, 7314, 16332, 2528, 16760, 8948, 4452, 5566, 7788, 23450, 14322],
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      }
+    };
+
+    var desktopVsMobile = {
+      week: {
+        data: [80, 20],
+        labels: ['Desktop', 'Mobile']
+      },
+      month: {
+        data: [75, 25],
+        labels: ['Desktop', 'Mobile']
+      },
+      year: {
+        data: [82, 18],
+        labels: ['Desktop', 'Mobile']
+      }
+    };
+
     var orders = {
       week: {
         data: [3, 1, 0, 0, 0, 4, 0],
@@ -71,6 +101,10 @@ angular.module('insightsApp')
           return topProductsViewed;
         case 'topProductsPurchased':
           return topProductsPurchased;
+        case 'visitors':
+          return visitors;
+        case 'desktopVsMobile':
+          return desktopVsMobile;
       }
     };
   });
