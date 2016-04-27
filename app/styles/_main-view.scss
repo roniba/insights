@@ -1,6 +1,5 @@
-top-products-charts {
+.side-by-side-charts {
   position: absolute;
-  top: 350px;
 
   chart-with-time-selection {
     position: absolute;
@@ -14,3 +13,17 @@ top-products-charts {
     }
   }
 }
+
+overview-charts {
+  top: 0;
+}
+
+visitors-charts {
+  top: 350px;
+}
+
+top-products-charts {
+  top: 700px;
+}
+
+

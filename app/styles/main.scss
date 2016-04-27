@@ -15,7 +15,6 @@ $enable-wix-style-css: true;
 @import 'colors';
 @import 'timeframe-selector';
 @import 'chart-with-time-selection';
-@import 'overview-charts';
-@import 'top-products-charts';
+@import 'main-view';
 
 $bg-color: $wix-gray-lightest;
