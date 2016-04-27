@@ -1,5 +1,7 @@
 .side-by-side-charts {
   position: absolute;
+  width: 100%;
+  height: 350px;
 
   chart-with-time-selection {
     position: absolute;
@@ -20,6 +22,7 @@ overview-charts {
 
 visitors-charts {
   top: 350px;
+  background-color: $color-d7;
 }
 
 top-products-charts {
