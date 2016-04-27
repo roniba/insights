@@ -56,8 +56,8 @@
     <script src="views/temp-app.html.js"></script>
     <script src="scripts/locale/messages_en.js"></script>
     <script src="scripts/directives/main-view.js"></script>
-    <script src="scripts/directives/overview-graphs.js"></script>
-    <script src="scripts/directives/top-products-graphs.js"></script>
+    <script src="scripts/directives/overview-charts.js"></script>
+    <script src="scripts/directives/top-products-charts.js"></script>
     <script src="scripts/directives/timeframe-selector.js"></script>
     <script src="scripts/directives/chart-with-time-selection.js"></script>
 
